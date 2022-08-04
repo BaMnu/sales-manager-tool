@@ -21,7 +21,7 @@ public class Main {
         }
 
         System.out.println("Заполните сумму выручки:");
-        int[] salesAmounts = new int[size];
+        long[] salesAmounts = new long[size];
         for (int j = 0; j < salesAmounts.length; j++) {
             salesAmounts[j] = input.nextInt();
         }
