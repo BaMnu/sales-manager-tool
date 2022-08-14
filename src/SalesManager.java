@@ -15,41 +15,37 @@ public class SalesManager {
         return max;
     }
 
-    public int truncatedMean(int[] array) {
+    public long truncatedMean(long[] sales) {
 
-        int max = array[0];
-        int min = array[1];
+        long max = sales[0];
+        long min = sales[1];
 
-        for (int ii = 1; ii < array.length; ii++) {
-            max = Math.max(array[ii], max);
-            min = Math.min(array[ii], min);
+        for (int ii = 1; ii < sales.length; ii++) {
+            max = Math.max(sales[ii], max);
+            min = Math.min(sales[ii], min);
         }
 
         int count = 0;
-        for (int arrayIndex : array) {
+        for (long arrayIndex : sales) {
             if (arrayIndex != max && arrayIndex != min) {
                 count++;
             }
         }
 
-        int[] array2 = new int[count];
-
+        long[] array2 = new long[count];
         int count2 = 0;
-
-        for (int j : array) {
+        for (long j : sales) {
             if (j != max && j != min) {
                 array2[count2] = j;
                 count2++;
             }
         }
         int sum = 0;
-        for (int i : array2) {
+        for (long i : array2) {
             sum += i;
         }
 
-        int statistics = sum / array2.length;
-
-        return statistics;
+        return sum / array2.length;
     }
 
 }
