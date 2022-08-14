@@ -36,15 +36,13 @@ public class Main {
             }
         }
 
-        int trimmedMean = salesManager.truncatedMean(salesAmounts);
-
         System.out.println(
                 "Наиболее продоваемый товар: "
                         + "'" + nameOfProduct + "'"
                         + "\nВыручка за период: "
                         + salesManager.max() + " руб."
-                        + "\nрасчёт обрезанного среднего: "
-                        + trimmedMean
+                        + "\nРасчёт обрезанного среднего: "
+                        +  salesManager.truncatedMean(salesAmounts)
         );
     }
 }
