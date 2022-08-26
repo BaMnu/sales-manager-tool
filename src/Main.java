@@ -42,7 +42,7 @@ public class Main {
                         + "\nВыручка за период: "
                         + salesManager.max() + " руб."
                         + "\nРасчёт обрезанного среднего: "
-                        +  salesManager.truncatedMean(salesAmounts)
+                        +  salesManager.truncatedMean()
         );
     }
 }

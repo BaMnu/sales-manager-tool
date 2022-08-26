@@ -15,7 +15,7 @@ public class SalesManager {
         return max;
     }
 
-    public long truncatedMean(long[] sales) {
+    public long truncatedMean() {
 
         long max = sales[0];
         long min = sales[1];
